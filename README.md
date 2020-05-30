@@ -1,6 +1,6 @@
 # new_v2ex
 
-Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
+Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。如果觉得本项目对你有帮助，麻烦给个star⭐️，非常感谢。
 
 Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
 
