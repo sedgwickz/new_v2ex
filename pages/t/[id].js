@@ -14,7 +14,7 @@ const PostComponent = styled.article`
     &::after {
       display: block;
       content: '';
-      background-color: #eee;
+      background-color: ${({ theme }) => theme.tagBgColor};
       height: 1px;
       margin: 0.5rem -0.8rem;
     }
@@ -56,7 +56,7 @@ const Comments = styled.div`
       span {
         padding: 3px 8px;
         border-radius: 12px;
-        background: #f0f0f0;
+        background: ${({ theme }) => theme.tagBgColor};
       }
     }
   }
@@ -64,7 +64,7 @@ const Comments = styled.div`
   .item::after {
     display: block;
     content: '';
-    background-color: #eee;
+    background-color: ${({ theme }) => theme.tagBgColor};
     height: 1px;
     margin: 0.5rem -0.8rem;
   }

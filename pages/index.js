@@ -8,21 +8,25 @@ const Tabs = styled.div`
   flex-wrap: wrap;
   a {
     padding: 0 0.5rem;
-    color: #555;
+    //
     border-radius: 0.2rem;
     margin-right: 1rem;
   }
-  a:link {
+  a:link,
+  a:visited {
     text-decoration: none;
+    color: #555;
   }
 
   a:hover {
-    background: #fafafa;
+    background: #eee;
   }
 
   .active {
-    color: white;
-    background: #334;
+    &:visited {
+      color: white;
+    }
+    background-color: ${({ theme }) => theme.tabBgColor};
   }
 `
 
@@ -31,7 +35,7 @@ const Item = styled.div`
   &::before {
     display: block;
     content: '';
-    background-color: #eee;
+    background-color: ${({ theme }) => theme.tagBgColor};
     height: 1px;
     margin: 0.5rem -0.8rem;
   }
@@ -57,7 +61,7 @@ const Item = styled.div`
 
     .tag {
       font-size: 0.8rem;
-      background: #f5f5f5;
+      background-color: ${({ theme }) => theme.tagBgColor};
       padding: 0.2rem;
       border-radius: 0.2rem;
       margin-right: 8px;
@@ -81,13 +85,13 @@ const Item = styled.div`
     margin-left: 1.5rem;
     a {
       border-radius: 0.6rem;
-      background-color: #aab0c6;
+      background-color: ${({ theme }) => theme.countBgColor};
       padding: 0 0.5rem;
       color: white;
     }
 
     a:visited {
-      background-color: #e5e5e5;
+      background-color: ${({ theme }) => theme.tagBgColor};
     }
   }
 `

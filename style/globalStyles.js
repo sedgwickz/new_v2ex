@@ -8,12 +8,12 @@ body {
   font-family: helvetica neue,luxi sans,dejavu sans,segoe ui,hiragino sans gb,microsoft yahei,sans-serif;
   line-height: 1.6;
   font-size: 14px;
-  background-color: ${(props) =>
-    props.theme === 'dark' ? 'black' : '#dedede'};
+  color: ${({ theme }) => theme.color};
+  background-color:  ${({ theme }) => theme.bgColor}; 
 }
 
-#wrapper {
-  height: 100vh;
+.wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -41,24 +41,24 @@ img {
 }
 
 .header {
-  display: flex;
+  display: flex;        
   align-items: center;
-  text-align: center;
-  font-weight: 500;
   font-size: 1.1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.22);
-  padding: 0.5rem 1rem;
-  background: #fff;
+  padding: 0.5rem 2rem;
+  background-color:  ${({ theme }) => theme.navBgColor};
   .logo {
-    flex-grow: 1;
-    img {
-      height: 30px;
+    flex: 1 1 auto;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 800;
+    a { 
+      text-decoration: none;
+      color:${({ theme }) => theme.logoColor};
     }
   }
   .menu {
-    aligh-self: flex-end;
     a {
-      color: black;
       margin-right: 1rem;
     }
   }
@@ -71,13 +71,13 @@ img {
 }
 
 .footer {
-  padding: 2rem 1.1rem;
-  background: white;
+  padding: 4rem 1.1rem;
   text-align: center;
+  background-color: ${({ theme }) => theme.navBgColor};
 }
 
 .card {
-  background: white;
+  background-color: ${({ theme }) => theme.cardBgColor}; 
   padding: 0.8rem;
 }
 
@@ -91,6 +91,12 @@ img {
   .container {
     width: 100%;
   }
+}
+
+.theme {
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  color:#778087; 
 }
 
 `
