@@ -81,17 +81,25 @@ img {
   padding: 0.8rem;
 }
 
-@media (max-width: 1024px) {
+
+@media (max-width: 768px) {
   .container {
-    width: 80vw;
+    width: auto;
   }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 992px) {
   .container {
-    width: 100%;
+    width: 750px;
   }
 }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
 
 .theme {
   font-size: 0.8rem;
