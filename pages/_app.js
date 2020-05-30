@@ -95,7 +95,21 @@ export default function MyApp({ Component, pageProps }) {
           <main className="container">
             <Component {...pageProps} />
           </main>
-          <footer className="footer">Footer</footer>
+          <footer className="footer">
+            <div className="info">
+              本项目为开源项目
+              <iframe
+                src="https://ghbtns.com/github-btn.html?user=sedgwickz&repo=new_v2ex&type=star&count=true&v=2"
+                frameborder="0"
+                scrolling="0"
+                width="150"
+                height="20"
+                title="GitHub"
+              ></iframe>
+            </div>
+            <br />
+            如果对你有帮助，请给一个star⭐️，Thank you！😊
+          </footer>
         </div>
       </ThemeProvider>
     </>

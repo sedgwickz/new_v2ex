@@ -72,8 +72,15 @@ img {
 
 .footer {
   padding: 4rem 1.1rem;
-  text-align: center;
   background-color: ${({ theme }) => theme.navBgColor};
+  text-align: center;
+  .info {
+    display:flex;
+    justify-content: center;
+    iframe {
+      margin: 0 1rem;
+    }
+  }
 }
 
 .card {
@@ -81,20 +88,19 @@ img {
   padding: 0.8rem;
 }
 
-
 @media (max-width: 768px) {
   .container {
     width: auto;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
-    width: 750px;
+    width: 80vw;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .container {
     width: 1024px;
   }
