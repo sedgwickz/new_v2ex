@@ -8,11 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
     "gray-matter": "^4.0.2",
+    "lodash": "^4.17.15",
     "next": "9.3.5",
     "node-fetch": "^2.6.0",
+    "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }
