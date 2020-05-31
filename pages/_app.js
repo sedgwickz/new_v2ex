@@ -6,7 +6,7 @@ import NProgress from 'nprogress'
 import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { initGA, logPageView } from '../googleAnalytics'
-import Head from 'next/Head'
+import Head from 'next/head'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
