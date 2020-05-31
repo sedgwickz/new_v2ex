@@ -94,7 +94,7 @@ export default function Post({ title, content, author, replies }) {
           return (
             <div className="item" key={r.no}>
               <div className="comment">
-                <img src={r.avatar_url} />
+                <img alt={r.author} src={r.avatar_url} />
                 <div className="middle">
                   <span>
                     <Link href="/member/[id]" as={`/member/${r.author}`}>

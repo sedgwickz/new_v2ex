@@ -128,7 +128,7 @@ export default function Home({ posts, current }) {
       {posts.map((p) => (
         <Item key={p.title_id}>
           <div className="item">
-            <img src={p.avatar_url} />
+            <img alt={p.author} src={p.avatar_url} />
             <div className="info">
               <Link href="/t/[id]" as={`${p.title_id}`}>
                 <a className="title">{p.title}</a>
