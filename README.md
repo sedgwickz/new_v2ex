@@ -4,7 +4,7 @@ Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。如果觉得�
 
 Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
 
-## Feature
+## Features
 
 - SSR 有利于SEO
 
@@ -14,7 +14,7 @@ Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
 
 ### TODO
 
-- 首次加载还需优化，现在styled-components有部分是客户端渲染，导致瞬间没有样式加载。
+- ~~首次加载还需优化，现在styled-components有部分是客户端渲染，导致瞬间没有样式加载。~~  -- Fixed
 
 - 其他登录，注册等模块Hack。（这里应该不会做了，感兴趣的朋友自己试试）
 

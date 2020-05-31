@@ -8,7 +8,6 @@ const Tabs = styled.div`
   flex-wrap: wrap;
   a {
     padding: 0 0.5rem;
-    //
     border-radius: 0.2rem;
     margin-right: 1rem;
   }

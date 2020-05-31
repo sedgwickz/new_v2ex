@@ -6,6 +6,7 @@ import NProgress from 'nprogress'
 import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { initGA, logPageView } from '../googleAnalytics'
+import Head from 'next/Head'
 
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
@@ -56,6 +57,18 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles theme={theme} />
+        <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content="创意工作者的社区。讨论编程、设计、硬件、游戏等令人激动的话题。"
+          ></meta>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <title>v2ex</title>
+        </Head>
         <div className="wrapper">
           <nav className="header">
             <div className="logo">
@@ -100,7 +113,7 @@ export default function MyApp({ Component, pageProps }) {
               本项目为开源项目
               <iframe
                 src="https://ghbtns.com/github-btn.html?user=sedgwickz&repo=new_v2ex&type=star&count=true&v=2"
-                frameborder="0"
+                frameBorder="0"
                 scrolling="0"
                 width="150"
                 height="20"
