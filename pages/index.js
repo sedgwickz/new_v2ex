@@ -48,7 +48,6 @@ const Item = styled.div`
     align-self: flex-start;
     width: 48px;
     height: 48px;
-    background: #eee;
   }
 
   .info {
@@ -81,7 +80,7 @@ const Item = styled.div`
   }
 
   .comment_count {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     a {
       border-radius: 0.6rem;
       background-color: ${({ theme }) => theme.countBgColor};
