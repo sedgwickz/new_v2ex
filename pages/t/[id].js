@@ -11,6 +11,10 @@ const PostComponent = styled.article`
       margin: 0;
     }
 
+    .content {
+      word-break: break-all;
+    }
+
     &::after {
       display: block;
       content: '';
@@ -31,7 +35,6 @@ const Comments = styled.div`
       align-self: flex-start;
       width: 48px;
       height: 48px;
-      background: #eee;
     }
 
     .middle {
@@ -45,16 +48,17 @@ const Comments = styled.div`
       }
 
       .content {
-        margin-top: 6px;
+        margin-top: 8px;
+        word-break: break-all;
       }
     }
 
     .no {
       align-self: flex-start;
       color: #ccc;
-      font-size: 10px;
+      font-size: 0.8rem;
       span {
-        padding: 3px 8px;
+        padding: 3px 6px;
         border-radius: 12px;
         background: ${({ theme }) => theme.tagBgColor};
       }
@@ -87,7 +91,10 @@ export default function Post({ title, content, author, replies }) {
             <a>{author}</a>
           </Link>
         </div>
-        <div dangerouslySetInnerHTML={createMarkup(`${content}`)} />
+        <div
+          className="content"
+          dangerouslySetInnerHTML={createMarkup(`${content}`)}
+        />
       </PostComponent>
       <Comments className="card">
         {replies.map((r) => {
