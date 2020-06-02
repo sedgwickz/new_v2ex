@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { getPost } from '../../lib/post'
 import styled from 'styled-components'
 import Head from 'next/head'
-
 const PostComponent = styled.article`
   .title {
     h1 {
@@ -75,7 +74,7 @@ const Comments = styled.div`
 `
 
 function createMarkup(content) {
-  return { __html: content }
+  return { __html: content.replace(/\<pre\>|\<\/pre\>/g, '') }
 }
 
 export default function Post({ title, content, author, replies }) {
