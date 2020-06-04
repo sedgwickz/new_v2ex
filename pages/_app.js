@@ -1,5 +1,5 @@
-import { GlobalStyles } from '../style/globalStyles'
-import '../style/nprogess.css'
+import { GlobalStyles } from '../styles/globalStyles'
+import '../styles/nprogess.css'
 import Link from 'next/link'
 import Router from 'next/router'
 import NProgress from 'nprogress'

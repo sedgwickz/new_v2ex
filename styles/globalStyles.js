@@ -10,6 +10,7 @@ body {
   font-size: 14px;
   color: ${({ theme }) => theme.color};
   background-color:  ${({ theme }) => theme.bgColor}; 
+  transition: all 0.5s ease-out;
 }
 
 .wrapper {

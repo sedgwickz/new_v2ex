@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <meta http-equiv="refresh"></meta>
+          <meta httpEquiv="refresh"></meta>
         </Head>
         <body>
           <Main />
