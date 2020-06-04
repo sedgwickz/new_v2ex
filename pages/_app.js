@@ -3,7 +3,7 @@ import '../style/nprogess.css'
 import Link from 'next/link'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { initGA, logPageView } from '../googleAnalytics'
 import Head from 'next/head'
@@ -46,12 +46,25 @@ export default function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState(blackTheme)
 
   useEffect(() => {
+    setTheme(
+      localStorage.getItem('theme') === 'white' ? whiteTheme : blackTheme,
+    )
     if (!window.GA_INITIALIZED) {
       initGA()
       window.GA_INITIALIZED = true
     }
     logPageView()
   }, [])
+
+  function changeThemeHandler(e) {
+    if (e.target.checked) {
+      setTheme(blackTheme)
+      localStorage.setItem('theme', 'black')
+    } else {
+      setTheme(whiteTheme)
+      localStorage.setItem('theme', 'white')
+    }
+  }
 
   return (
     <>
@@ -71,11 +84,7 @@ export default function MyApp({ Component, pageProps }) {
               <span className="theme">
                 <label>
                   <input
-                    onChange={(e) =>
-                      e.target.checked
-                        ? setTheme(blackTheme)
-                        : setTheme(whiteTheme)
-                    }
+                    onChange={changeThemeHandler}
                     type="checkbox"
                     checked={theme === blackTheme ? 'checked' : ''}
                   ></input>
