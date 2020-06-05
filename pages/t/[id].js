@@ -64,6 +64,12 @@ const Comments = styled.div`
     }
   }
 
+  .noComments {
+    padding: 1rem;
+    color: #ddd;
+    text-align: center;
+  }
+
   .item::after {
     display: block;
     content: '';
@@ -96,30 +102,31 @@ export default function Post({ title, content, author, replies }) {
         />
       </PostComponent>
       <Comments className="card">
-        {replies.map((r) => {
-          return (
-            <div className="item" key={r.no}>
-              <div className="comment">
-                <img alt={r.author} src={r.avatar_url} />
-                <div className="middle">
-                  <span>
-                    <Link href="/member/[id]" as={`/member/${r.author}`}>
-                      <a>{r.author}</a>
-                    </Link>
-                    <span className="ago">{r.ago}</span>
-                  </span>
-                  <div
-                    className="content"
-                    dangerouslySetInnerHTML={createMarkup(`${r.content}`)}
-                  />
-                </div>
-                <div className="no">
-                  <span>{r.no}</span>
+        {(replies.length &&
+          replies.map((r) => {
+            return (
+              <div className="item" key={r.no}>
+                <div className="comment">
+                  <img alt={r.author} src={r.avatar_url} />
+                  <div className="middle">
+                    <span>
+                      <Link href="/member/[id]" as={`/member/${r.author}`}>
+                        <a>{r.author}</a>
+                      </Link>
+                      <span className="ago">{r.ago}</span>
+                    </span>
+                    <div
+                      className="content"
+                      dangerouslySetInnerHTML={createMarkup(`${r.content}`)}
+                    />
+                  </div>
+                  <div className="no">
+                    <span>{r.no}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })) || <div className="noComments">暂无评论哦🤷🏻‍♂️</div>}
       </Comments>
     </>
   )
