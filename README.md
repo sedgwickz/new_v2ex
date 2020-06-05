@@ -1,16 +1,23 @@
 # new_v2ex
 
-Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。如果觉得本项目对你有帮助，麻烦给个star⭐️，非常感谢。
+Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
+
+如果觉得本项目对你有帮助，麻烦给个star⭐️，非常感谢。
+
+PS：江湖人称“**天下武功，唯快不破！**”，这就是本项目核心目标，没有最快，只有更快😂，如果有优化建议麻烦提issue。
+
 
 Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
 
 ## Features
 
-- SSR 有利于SEO
+- Blazing fast 飞快
 
-- 响应式布局，支持桌面和手机显示，（IE<=11未测试，可能存在部分布局问题）
+- Global SSR 全局服务端渲染
 
-- 支持白色和暗黑主题
+- Responsive Layout 响应式布局，支持桌面和移动设备显示，（IE<=11未测试，可能存在部分布局问题）
+
+- Multiple Themes 多主题，支持亮色和暗黑主题
 
 ### TODO
 
