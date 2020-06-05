@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -33,6 +33,7 @@ export default class MyDocument extends Document {
       <Html lang="zh">
         <Head>
           <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
           <meta
             name="description"
             content="创意工作者的社区。讨论编程、设计、硬件、游戏等令人激动的话题。"
@@ -41,7 +42,6 @@ export default class MyDocument extends Document {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <meta httpEquiv="refresh"></meta>
         </Head>
         <body>
           <Main />

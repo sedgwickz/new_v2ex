@@ -1,17 +1,13 @@
-import Link from 'next/link'
-import { getPost } from '../../lib/post'
-import styled from 'styled-components'
 import Head from 'next/head'
+import Link from 'next/link'
+import styled from 'styled-components'
+import { getPost } from '../../lib/post'
 const PostComponent = styled.article`
   .title {
     h1 {
       font-size: 1.8rem;
       font-weight: 500;
       margin: 0;
-    }
-
-    .content {
-      word-break: break-all;
     }
 
     &::after {
@@ -21,6 +17,10 @@ const PostComponent = styled.article`
       height: 1px;
       margin: 0.5rem -0.8rem;
     }
+  }
+
+  .content {
+    word-break: break-all;
   }
 `
 const Comments = styled.div`
@@ -74,7 +74,7 @@ const Comments = styled.div`
 `
 
 function createMarkup(content) {
-  return { __html: content.replace(/\<pre\>|\<\/pre\>/g, '') }
+  return { __html: content }
 }
 
 export default function Post({ title, content, author, replies }) {

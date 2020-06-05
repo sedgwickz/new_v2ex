@@ -66,7 +66,7 @@ img {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 100%;
   margin: 12px auto;
   flex: 1 1 auto;
 }
@@ -89,15 +89,9 @@ img {
   padding: 0.8rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
     width: auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    width: 80vw;
   }
 }
 
@@ -106,7 +100,6 @@ img {
     width: 1024px;
   }
 }
-
 
 .theme {
   font-size: 0.8rem;
