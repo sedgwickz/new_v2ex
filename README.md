@@ -1,5 +1,7 @@
 # new_v2ex
 
+![](https://github.com/sedgwickz/new_v2ex/workflows/CI/badge.svg)
+
 Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
 
 如果觉得本项目对你有帮助，麻烦给个star⭐️，非常感谢。
