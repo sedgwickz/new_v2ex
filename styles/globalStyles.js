@@ -82,6 +82,15 @@ img {
       margin: 0 1rem;
     }
   }
+
+  .badge {
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    img {
+      margin: 1rem 0.5rem;
+    }
+  }
 }
 
 .card {

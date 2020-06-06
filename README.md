@@ -1,6 +1,6 @@
 # new_v2ex
 
-![](https://github.com/sedgwickz/new_v2ex/workflows/CI/badge.svg) ![](https://img.shields.io/uptimerobot/status/m785147913-d58edfa2bd5be6d6125857ed)
+![](https://github.com/sedgwickz/new_v2ex/workflows/CI/badge.svg)  ![](https://img.shields.io/uptimerobot/status/m785148416-b517af164156db5e07cde62d?label=%E6%BA%90v2ex) ![](https://img.shields.io/uptimerobot/status/m785147913-d58edfa2bd5be6d6125857ed?label=%E6%9C%AC%E7%AB%99)
 
 Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
 

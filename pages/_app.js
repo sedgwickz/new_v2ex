@@ -107,6 +107,16 @@ export default function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
           </main>
           <footer className="footer">
+            <div className="badge">
+              <img
+                alt="Uptime Robot status"
+                src="https://img.shields.io/uptimerobot/status/m785148416-b517af164156db5e07cde62d?label=%E6%BA%90v2ex"
+              />
+              <img
+                alt="Uptime Robot status"
+                src="https://img.shields.io/uptimerobot/status/m785147913-d58edfa2bd5be6d6125857ed?label=%E6%9C%AC%E7%AB%99"
+              />
+            </div>
             <div className="info">
               本项目为开源项目
               <iframe
