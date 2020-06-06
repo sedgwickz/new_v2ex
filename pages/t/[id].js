@@ -25,6 +25,18 @@ const PostComponent = styled.article`
 `
 const Comments = styled.div`
   margin: 1rem 0;
+  .reply_count {
+    color: #ddd;
+    padding: 0.5rem;
+
+    &::after {
+      display: block;
+      content: '';
+      background-color: ${({ theme }) => theme.tagBgColor};
+      height: 1px;
+      margin: 0.5rem -0.8rem;
+    }
+  }
   .comment {
     display: flex;
     align-items: center;
@@ -79,11 +91,26 @@ const Comments = styled.div`
   }
 `
 
+const Paginate = styled.div`
+  text-align: center;
+  a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  .active {
+    background: #ddd;
+  }
+`
+
 function createMarkup(content) {
   return { __html: content }
 }
 
-export default function Post({ title, content, author, replies }) {
+export default function Post(props) {
+  const { id, title, content, author, replies, reply_count, pages } = props
   return (
     <>
       <Head>
@@ -102,7 +129,9 @@ export default function Post({ title, content, author, replies }) {
         />
       </PostComponent>
       <Comments className="card">
-        {(replies.length &&
+        <div className="reply_count">{reply_count}</div>
+        {(replies &&
+          replies.length &&
           replies.map((r) => {
             return (
               <div className="item" key={r.no}>
@@ -127,14 +156,30 @@ export default function Post({ title, content, author, replies }) {
               </div>
             )
           })) || <div className="noComments">暂无评论哦🤷🏻‍♂️</div>}
+        <Paginate>
+          {pages.map((page) => {
+            return (
+              <Link
+                href="/t/[id]/[pageNum]"
+                as={`/t/${id}/${page.number}`}
+                key={page.number}
+              >
+                <a className={`number ${page.isCurrent ? 'active' : ''}`}>
+                  {page.number}
+                </a>
+              </Link>
+            )
+          })}
+        </Paginate>
       </Comments>
     </>
   )
 }
 
 export async function getServerSideProps(ctx) {
-  const post = await getPost(ctx.params.id)
+  const id = ctx.params.id
+  const post = await getPost(id)
   return {
-    props: { ...post },
+    props: { ...post, id: id },
   }
 }
