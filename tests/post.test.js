@@ -8,8 +8,7 @@ test('get post from https://v2ex/com/t/678748?p=1 ', async () => {
   post.replies.map((r, index) => {
     expect(r.no).toBe(`${index + 1}`)
   })
-  //console.log(post.replies)
-  //expect(post.replies.length).toBe(100)
+  expect(post.replies.length).toBe(101)
 })
 
 test('get post from https://v2ex/com/t/678748 ', async () => {

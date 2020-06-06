@@ -3,9 +3,9 @@ import '../styles/nprogess.css'
 import Link from 'next/link'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-import { useState, useEffect, useReducer } from 'react'
+import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { initGA, logPageView } from '../googleAnalytics'
+import ReactGA from 'react-ga'
 import Head from 'next/head'
 
 Router.events.on('routeChangeStart', () => {
@@ -50,10 +50,11 @@ export default function MyApp({ Component, pageProps }) {
       localStorage.getItem('theme') === 'white' ? whiteTheme : blackTheme,
     )
     if (!window.GA_INITIALIZED) {
-      initGA()
+      ReactGA.initialize('UA-168042043-1')
       window.GA_INITIALIZED = true
     }
-    logPageView()
+    ReactGA.set({ page: window.location.pathname })
+    ReactGA.pageview(window.location.pathname)
   }, [])
 
   function changeThemeHandler(e) {
