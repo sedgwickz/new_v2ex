@@ -41,7 +41,7 @@ const Comments = styled.div`
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
-    img {
+    .avatar {
       border-radius: 0.3rem;
       align-self: flex-start;
       width: 48px;
@@ -136,7 +136,7 @@ export default function Post(props) {
             return (
               <div className="item" key={r.no}>
                 <div className="comment">
-                  <img alt={r.author} src={r.avatar_url} />
+                  <img className="avatar" alt={r.author} src={r.avatar_url} />
                   <div className="middle">
                     <span>
                       <Link href="/member/[id]" as={`/member/${r.author}`}>
