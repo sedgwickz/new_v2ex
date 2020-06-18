@@ -11,17 +11,13 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "cloudscraper": "^4.6.0",
-    "gray-matter": "^4.0.2",
     "lodash": "^4.17.15",
     "next": "9.3.5",
-    "node-cache": "^5.1.1",
     "node-fetch": "^2.6.0",
     "nprogress": "^0.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-ga": "^2.7.0",
-    "react-spring": "^8.0.27",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

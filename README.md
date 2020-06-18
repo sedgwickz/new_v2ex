@@ -8,6 +8,8 @@ Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
 
 Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
 
+(PS：本站数据为 V2EX 历史数据，非实时数据)
+
 ## Features
 
 - Blazing fast 飞快
