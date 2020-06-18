@@ -8,8 +8,6 @@ Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
 
 Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
 
-（PS: 由于近期 V2EX 正在遭受 DDOS 攻击，本项目所使用的接口可能不是很稳定，如果 Live Demo 无法显示数据，请下载源代码本地运行`yarn dev`查看效果。）
-
 ## Features
 
 - Blazing fast 飞快

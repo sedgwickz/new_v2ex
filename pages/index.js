@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { getPosts } from '../lib/posts'
+import posts from '../data/list.json'
 
 const Tabs = styled.div`
   padding: 0.2 rem;
@@ -129,7 +129,7 @@ export default function Home({ posts, current }) {
           <div className="item">
             <img alt={p.author} src={p.avatar_url} />
             <div className="info">
-              <Link href="/t/[id]" as={`${p.title_id}`}>
+              <Link href="/t/[id]" as={`/t/${p.id}`}>
                 <a className="title">{p.title}</a>
               </Link>
               <div>
@@ -158,6 +158,6 @@ export default function Home({ posts, current }) {
 }
 
 export async function getServerSideProps() {
-  const posts = await getPosts()
-  return { props: { posts: posts } }
+  //const posts = fs.readFileSync(data)
+  return { props: { posts: posts['all'] } }
 }

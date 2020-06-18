@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { getPost } from '../../lib/post'
+import data from '../../data/detail.json'
 const PostComponent = styled.article`
   .title {
     h1 {
@@ -178,7 +179,8 @@ export default function Post(props) {
 
 export async function getServerSideProps(ctx) {
   const id = ctx.params.id
-  const post = await getPost(id)
+  //const post = await getPost(id)
+  const post = data[id]
   return {
     props: { ...post, id: id },
   }
