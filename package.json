@@ -1,7 +1,6 @@
 {
-  "proxy": "http://localhost:5000",
-  "name": "learn-starter",
-  "version": "0.1.0",
+  "name": "new_v2ex",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,18 +9,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "lodash": "^4.17.15",
-    "next": "9.3.5",
-    "node-fetch": "^2.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "lodash": "^4.17.21",
+    "next": "12.2.2",
+    "node-fetch": "^2.2.8",
     "nprogress": "^0.2.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-ga": "^2.7.0",
-    "styled-components": "^5.1.1"
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
-    "jest": "^26.0.1"
+    "babel-plugin-styled-components": "^2.0.7",
+    "jest": "^28.1.3"
   }
 }

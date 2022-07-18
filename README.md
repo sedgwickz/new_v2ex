@@ -6,7 +6,7 @@ Nextjs 练手项目，仿[v2ex](https://v2ex.com)，请勿商用。
 
 如果觉得本项目对你有帮助，麻烦给个 star⭐️，非常感谢。
 
-Live Demo: [https://v2ex.now.sh](https://v2ex.now.sh)
+Live Demo: [https://v2ex.vercel.app](https://v2ex.vercel.app)
 
 (PS：本站数据为 V2EX 历史数据，非实时数据)
 
